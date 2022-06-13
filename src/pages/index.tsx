@@ -8,7 +8,7 @@ import AvatarEditor from './components/AvatarEditor';
 
 const URL = `https://notion-avatar.vercel.app/`;
 
-const Home: NextPage = () => {
+const Home: NextPage = (props) => {
   const { t } = useTranslation(`common`);
 
   return (
@@ -83,7 +83,7 @@ const Home: NextPage = () => {
           sizes="16x16"
           href="/favicon/favicon-16x16.png"
         />
-        <link rel="manifest" href="/manifest.json" />
+        <link rel="manifest" href={`${props.basePath}/manifest.json`}  />
         <title>{t(`siteTitle`)}</title>
         <meta name="description" content={t(`siteDescription`)} />
         <meta name="msapplication-TileColor" content="#fffefc" />
@@ -120,7 +120,7 @@ export async function getStaticProps({
 }: GetStaticPropsContext & { locale: string }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, [`common`])),
+      basePath:process.env.BASE_PATH,...(await serverSideTranslations(locale, [`common`])),
     },
   };
 }
