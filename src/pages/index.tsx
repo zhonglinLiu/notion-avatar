@@ -10,7 +10,8 @@ const URL = `https://notion-avatar.vercel.app/`;
 
 const Home: NextPage = (props) => {
   const { t } = useTranslation(`common`);
-
+  let basePath = (props as any).basePath
+  console.log(basePath)
   return (
     <>
       <Head>
@@ -83,7 +84,7 @@ const Home: NextPage = (props) => {
           sizes="16x16"
           href="/favicon/favicon-16x16.png"
         />
-        <link rel="manifest" href={`${props.basePath}/manifest.json`}  />
+        <link rel="manifest" href={`${basePath}/manifest.json`}  />
         <title>{t(`siteTitle`)}</title>
         <meta name="description" content={t(`siteDescription`)} />
         <meta name="msapplication-TileColor" content="#fffefc" />
