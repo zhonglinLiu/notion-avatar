@@ -22,22 +22,26 @@ export default function Footer() {
           {t(`dribbble`)}
         </a>
         <span className="mx-2 hidden md:inline-block">·</span>
-        <a className="hover:underline" href="https://twitter.com/phillzou">
+        <a className="hover:underline" href="mailto:hi.life@qq.com">
           {t(`twitter`)}
         </a>
         <span className="mx-2">·</span>
         <a className="transition hover:underline" href={t(`coffeeUrl`)}>
           {t(`coffee`)}
         </a>
+        <span className="mx-2">·</span>
+        <a className="transition hover:underline" href={t(`couponsUrl`)}>
+          {t(`coupons`)}
+        </a>
       </div>
       <div className="text-gray-500 mt-3 px-6 text-center">
-        <a
+        {/* <a
           href="https://abstractlab.gumroad.com/l/noto-avatar"
           className="hover:underline"
         >
           &copy;{` ${t(`illustrations`)}`}
-        </a>
-        {t(`designedBy`)}
+        </a> */}
+        {/* {t(`designedBy`)}
         <a href="https://twitter.com/felix12777" className="hover:underline">
           {` Felix Wong `}
         </a>
@@ -48,7 +52,7 @@ export default function Footer() {
         >
           {` CC0 `}
         </a>
-        {t(`license`)}
+        {t(`license`)} */}
       </div>
     </footer>
   );
