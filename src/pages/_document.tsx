@@ -6,7 +6,11 @@ class Document extends NextDocument {
     return (
       <Html>
         <Head>
-          <link href={`${process.env.BASE_PATH}/fonts/Quicksand.tff`} as="font" crossOrigin="anonymous" />
+          <link
+            href={`${process.env.BASE_PATH}/fonts/Quicksand.tff`}
+            as="font"
+            crossOrigin="anonymous"
+          />
           {/* Google Analytics */}
           <script
             async
