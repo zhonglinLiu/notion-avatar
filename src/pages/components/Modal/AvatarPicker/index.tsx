@@ -6,6 +6,8 @@ import { useTranslation } from 'next-i18next';
 
 import Modal from '../Common';
 
+const avator = process.env.NEXT_PUBLIC_URL;
+
 type AvatarPickerProps = {
   onCancel: () => void;
   avatarPart: AvatarPickerConfig;
@@ -44,7 +46,7 @@ export default function AvatarPicker({
                 >
                   <div className="flex justify-center items-center">
                     <Image
-                      src={`/avatar/part/${avatarPart.part}/${avatarPart.part}-${index}.svg`}
+                      src={`${avator}/avatar/part/${avatarPart.part}/${avatarPart.part}-${index}.svg`}
                       width={50}
                       height={50}
                     />

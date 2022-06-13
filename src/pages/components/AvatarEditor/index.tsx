@@ -29,6 +29,8 @@ import EmbedModal from '../Modal/Embed';
 import PaletteModal from '../Modal/Palette';
 import AvatarPicker from '../Modal/AvatarPicker';
 
+const avator = process.env.NEXT_PUBLIC_URL;
+
 export default function AvatarEditor() {
   const router = useRouter();
 
@@ -180,7 +182,6 @@ export default function AvatarEditor() {
   const onOpenPaletteModal = () => {
     toggleModal('palette');
   };
-
   return (
     <>
       {modalStates.avatarPicker && (
@@ -256,7 +257,7 @@ export default function AvatarEditor() {
                 <Image
                   width={30}
                   height={30}
-                  src={flip ? '/avator/icon/flip-left.svg' : '/avator/icon/flip-right.svg'}
+                  src={flip ? `${avator}/icon/flip-left.svg` : `${avator}/icon/flip-right.svg`}
                 />
               </button>
               <button
@@ -264,7 +265,7 @@ export default function AvatarEditor() {
                 className="w-8 h-8 sm:w-12 sm:h-12 tooltip ml-2"
                 onClick={onOpenPaletteModal}
               >
-                <Image width={30} height={30} src="/avator/icon/palette.svg" />
+                <Image width={30} height={30} src={`${avator}/icon/palette.svg`} />
               </button>
             </div>
           </div>
@@ -282,7 +283,7 @@ export default function AvatarEditor() {
                   tooltip={t(type)}
                 >
                   <Image
-                    src={`/avator/avatar/part/${type}/${type}-${
+                    src={`${avator}/avatar/part/${type}/${type}-${
                       config[type as AvatarPart]
                     }.svg`}
                     width={30}
@@ -305,7 +306,7 @@ export default function AvatarEditor() {
               >
                 <>
                   <Image
-                    src={`/avatar/part/festival/${festival}/${festival}-${config[festival]}.svg`}
+                    src={`${avator}/avatar/part/festival/${festival}/${festival}-${config[festival]}.svg`}
                     width={30}
                     height={30}
                   />
@@ -325,7 +326,7 @@ export default function AvatarEditor() {
               className="mb-3 md:mb-0 focus:ring-2 focus:ring-offset-2 focus:ring-black hover:bg-gray-50 outline-none flex items-center justify-center w-full md:w-60 border-3 border-black text-black font-bold py-2 px-4 rounded-full"
             >
               <Image
-                src="/avator/icon/dice.svg"
+                src={`${avator}/icon/dice.svg`}
                 alt={t('random')}
                 width={28}
                 height={28}
@@ -338,7 +339,7 @@ export default function AvatarEditor() {
               className="mb-3 md:mb-0 focus:ring-2 focus:ring-offset-2 focus:ring-black hover:bg-gray-50 outline-none flex items-center justify-center w-full md:w-60 border-3 border-black text-black font-bold py-2 px-4 rounded-full"
             >
               <Image
-                src="/avator/icon/code.svg"
+                src={`${avator}/icon/code.svg`}
                 alt={t('embed')}
                 width={28}
                 height={28}
@@ -352,7 +353,7 @@ export default function AvatarEditor() {
                 className="focus:ring-2 focus:ring-offset-2 focus:ring-black hover:bg-gray-50 outline-none select-none flex items-center justify-center md:w-52 border-3 border-black text-black font-bold py-2 px-4 rounded-full rounded-r-none flex-grow"
               >
                 <Image
-                  src="/avator/icon/download.svg"
+                  src={`${avator}/icon/download.svg`}
                   alt={t('download')}
                   width={28}
                   height={28}

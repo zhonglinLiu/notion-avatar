@@ -3,7 +3,6 @@ const withPWA = require('next-pwa')
 const runtimeCaching = require('next-pwa/cache')
 
 const isProd = process.env.NODE_ENV === "production";
-
 function getBasePath() {
   var basePath = "";
 

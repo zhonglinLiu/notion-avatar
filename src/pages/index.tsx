@@ -10,7 +10,7 @@ const URL = `https://notion-avatar.vercel.app/`;
 
 const Home: NextPage = () => {
   const { t } = useTranslation(`common`);
-  const basePath = 'avator';
+  const basePath = process.env.NEXT_PUBLIC_URL;
   return (
     <>
       <Head>

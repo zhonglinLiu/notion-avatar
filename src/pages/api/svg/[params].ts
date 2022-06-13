@@ -37,7 +37,6 @@ export default async function handler(
   res: NextApiResponse,
 ) {
   const { params } = req.query;
-
   // decode
   const config = JSON.parse(
     Buffer.from(params as string, `base64`).toString(),
