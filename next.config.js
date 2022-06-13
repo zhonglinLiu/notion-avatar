@@ -32,7 +32,7 @@ module.exports = withPWA(
       });
       return config;
     },
-    assetPrefix: getBasePath(), //加前缀
+    // assetPrefix: getBasePath(), //加前缀
     basePath: getBasePath(), //node 
   }
 );
