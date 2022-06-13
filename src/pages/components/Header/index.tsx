@@ -1,12 +1,14 @@
 import Image from 'next/image';
 import Decoration from './decoration';
 
+const avator = process.env.NEXT_PUBLIC_URL;
+
 export default function Header() {
   return (
     <header className="relative">
       <div className="flex py-5 px-5 sm:px-16 md:px-32">
         <Image
-          src="/logo.gif"
+          src={`${avator}/logo.gif`}
           alt="Notion Avatar Logo"
           width={50}
           height={50}
