@@ -34,7 +34,7 @@ export default function Footer() {
           {t(`coupons`)}
         </a>
       </div>
-      {/* <div className="text-gray-500 mt-3 px-6 text-center"> */}
+      <div className="text-gray-500 mt-3 px-6 text-center">
         {/* <a
           href="https://abstractlab.gumroad.com/l/noto-avatar"
           className="hover:underline"
@@ -53,7 +53,7 @@ export default function Footer() {
           {` CC0 `}
         </a>
         {t(`license`)} */}
-      {/* </div> */}
+      </div>
     </footer>
   );
 }
