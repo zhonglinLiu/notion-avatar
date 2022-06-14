@@ -107,7 +107,7 @@ const Home: NextPage = () => {
       </Head>
 
       <Header />
-      <main className="my-5">
+      <main className="my-4">
         <AvatarEditor />
       </main>
       <Footer />
